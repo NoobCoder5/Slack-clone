@@ -1,10 +1,17 @@
 import React from 'react'
-
+import "./style.css"
+import Header from "./Header"
+import Sidebar from "./Sidebar"
+import Text from "./Text"
 const App = () => {
     return (
-        <div>
-            <h1>hellodo</h1>
-        </div>
+        <>
+           <div className="op">
+            <Header/>
+            <Sidebar/>
+            <Text/>
+           </div>
+        </>
     )
 }
 

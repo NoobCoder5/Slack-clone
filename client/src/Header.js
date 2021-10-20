@@ -3,9 +3,7 @@ import React from 'react'
 const Header = () => {
     return (
         <>
-            <header>
-                <div className="logo"></div>
-            </header>
+         <div id="one">header</div>
         </>
     )
 }

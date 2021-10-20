@@ -1,1 +1,29 @@
-t
+body{
+    margin: 0;
+    padding: 0;
+
+}
+.op{
+    display: grid;
+    grid-template-columns: 1.3fr 5fr ;
+    grid-template-rows: 10vh 90vh;
+}
+
+#one{
+    background-color:red;
+    grid-column:1/4
+}
+#two{
+    background-color:blue
+}
+#three{
+    background-color:green;
+    overflow: auto;
+}
+#three::-webkit-scrollbar{
+    display: none;
+  }
+  #three {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
