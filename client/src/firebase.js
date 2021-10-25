@@ -1,6 +1,12 @@
 // Import the functions you need from the SDKs you need
-import firebase from "firebase"
+import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+
+import { getFirestore } from "firebase/firestore";
+
+import { getAuth } from "firebase/auth";
+import { GoogleAuthProvider } from "firebase/auth";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -13,14 +19,15 @@ const firebaseConfig = {
   storageBucket: "slack-clone-87bee.appspot.com",
   messagingSenderId: "603904867892",
   appId: "1:603904867892:web:e16e0e08ad7e5be31a1461",
-  measurementId: "G-37RE722JJ1"
+  measurementId: "G-37RE722JJ1",
 };
 
 // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const db = app.firestore()
-const analytics = getAnalytics(app);
-const auth = firebase.auth()
-const provider = new firebase.auth.GoogleAuthProvider
-export {auth,provider}
-export default db
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth();
+
+const provider = new GoogleAuthProvider();
+
+
+export { db, provider, auth };
