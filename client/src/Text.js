@@ -104,11 +104,11 @@ const Text = () => {
                   {user ? (
                     <img
                       style={{
-                        width: "45px",
-                        height: "45px",
+                        width: "35px",
+                        height: "35px",
                         marginTop: "10px",
                         marginLeft: "10px",
-                        borderRadius: "40px",
+                        
                       }}
                       src={e.url}
                     />
@@ -120,7 +120,7 @@ const Text = () => {
                   <br />
                 </div>
                 <div className="data">
-                  <p className="">{e.message}</p>
+                  <p className="ops">{e.message}</p>
                 </div>
               </div>
             );
