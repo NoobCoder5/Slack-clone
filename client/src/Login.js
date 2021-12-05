@@ -62,7 +62,7 @@ const Login = () => {
               login();
             }}
           >
-            login
+            Login
           </button>
         </div>
       )}
